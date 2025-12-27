@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>LocalChat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🚀 LocalChat</h1>
+            <div class="connection">
+                <input type="text" id="ip-input" placeholder="IP сервера" value="192.168.">
+                <input type="text" id="nick-input" placeholder="Твой ник" maxlength="15">
+                <button onclick="connect()">Подключиться</button>
+            </div>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+            <div class="message system">
+                Добро пожаловать! Подключись к серверу.
+            </div>
+        </div>
+        
+        <div class="input-area">
+            <input type="text" id="message-input" placeholder="Сообщение..." disabled>
+            <button onclick="sendMessage()" disabled id="send-btn">Отправить</button>
+        </div>
+        
+        <div class="info">
+            <span id="status">❌ Не подключено</span>
+            <span>Пользователей: <span id="user-count">0</span></span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
